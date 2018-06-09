@@ -8,7 +8,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @SpringBootApplication
 
 
-@ComponentScan(basePackages={"com.controller","com.output","com.input","sample.aop.service","sample.aop.monitor"})
+@ComponentScan(basePackages={"com.controller","com.output","com.input","sample.aop.service","sample.aop.monitor","com.devglan.controller","com.devglan.service","com.devglan.dao"})
 public class SpringBootDemoApplication {
 
 	public static void main(String[] args) {
