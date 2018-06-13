@@ -9,8 +9,8 @@ import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.springframework.stereotype.Repository;
 
+import com.boot.SpringBootDemo.entity.UserDetails;
 import com.devglan.dao.UserDao;
-import com.devglan.model.UserDetails;
 
 @Repository
 public class UserDaoImpl implements UserDao {
@@ -19,7 +19,11 @@ public class UserDaoImpl implements UserDao {
     private EntityManager entityManager;
 	
 	public List<UserDetails> getUserDetails() {
+		
+		
 		Criteria criteria = entityManager.unwrap(Session.class).createCriteria(UserDetails.class);
+		
+		
 		return criteria.list();
 	}
 

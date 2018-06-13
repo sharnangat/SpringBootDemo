@@ -8,8 +8,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.boot.SpringBootDemo.entity.UserDetails;
 import com.devglan.dao.UserDao;
-import com.devglan.model.UserDetails;
 import com.devglan.service.UserService;
 
 @Service

@@ -1,4 +1,4 @@
-package com.devglan.model;
+package com.app.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,22 +8,17 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "USER_DETAILS")
-public class UserDetails {
-
+@Table(name="STUDENT_TABLE")
+public class Student {
 	@Id
-	@Column
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
-
-	@Column
+	
+	@Column(name="firstName")
 	private String firstName;
-	@Column
-	private String lastName;
-	@Column
-	private String email;
-	@Column
-	private String password;
+	
+	@Column(name="lastName")
+    private String lastName;
 
 	public int getId() {
 		return id;
@@ -48,20 +43,9 @@ public class UserDetails {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
-	}
 	
+	
+	
+	
+
 }
